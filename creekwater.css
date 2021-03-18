@@ -3680,7 +3680,12 @@ h6 code {
   #write {
     margin: 0 !important;
   }
-  h1,
+  h1 {
+      page-break-before: always;
+  }
+  h1:first-of-type {
+      page-break-before: avoid;
+  }
   h2,
   h3,
   h4,
