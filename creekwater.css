@@ -1362,6 +1362,40 @@ h4 {
 #write h6::before {
   content: "◎ ";
 }
+
+/* 侧边栏大纲添加序号 */
+
+.sidebar-content {
+  counter-reset: h1
+}
+
+.outline-h1 {
+  counter-reset: h2
+}
+
+.outline-h2 {
+  counter-reset: h3
+}
+
+.outline-h3 {
+  counter-reset: h4
+}
+
+.outline-h1>.outline-item>.outline-label:before {
+  counter-increment: h1;
+  content: counter(h1) "  "
+}
+
+.outline-h2>.outline-item>.outline-label:before {
+  counter-increment: h2;
+  content: counter(h1) "." counter(h2) "  "
+}
+
+.outline-h3>.outline-item>.outline-label:before {
+  counter-increment: h3;
+  content: counter(h1) "." counter(h2) "." counter(h3) "  "
+}
+
 /** override the default style for focused headings */
 #write > h3.md-focus::before,
 #write > h4.md-focus::before,
