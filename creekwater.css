@@ -646,6 +646,7 @@ h6 {
   font-family: "VLOOK Sans", "Noto Sans CJK SC", "Source Han Sans SC", "思源黑体", "Microsoft YaHei", "微软雅黑", SimHei, "黑体", "PingFang SC", "PingFang TC", "PingFang HK", sans-serif;
   font-weight: 900;
   border-radius: var(--vlook-base-radius) var(--vlook-base-radius) 0 0;
+  /* 标题背景渐变阴影 */
   background: linear-gradient(0deg, var(--header-bg-start-color), var(--header-bg-end-color));
 }
 h1 + ul,
@@ -665,20 +666,22 @@ h6 + ol {
 h1 {
   margin-top: 0;
   font-size: 2em;
+  /* 标题背景边框渐变阴影 */
   box-shadow: 0 7px 0 0 var(--header-box-shadow) inset;
 }
 h2 {
-  margin-top: 3em;
+  margin-top: 0;
   font-size: 1.8em;
   box-shadow: 0 5px 0 0 var(--header-box-shadow) inset;
 }
+/* h1和h2在一起 */
 h1 + h2 {
   box-shadow: none;
   background: none;
   margin-top: -0.5em;
 }
 h3 {
-  margin-top: 2em;
+  margin-top: 0;
   font-size: 1.6em;
   box-shadow: 0 3px 0 0 var(--header-box-shadow) inset;
 }
@@ -688,7 +691,7 @@ h2 + h3 {
   margin-top: -0.5em;
 }
 h4 {
-  margin-top: 2em;
+  margin-top: 0;
   font-size: 1.4em;
   box-shadow: 0 1px 0 0 var(--header-box-shadow) inset;
 }
