@@ -1272,6 +1272,14 @@ code {
   top: 3px;
   left: 8px;
 }
+#write > pre.md-meta-block {
+  font-family: "VLOOK Sans Mono", "Noto Sans Mono", Iosevka, "SF Mono", Menlo, "Cascadia Mono", Consolas, Courier, "Courier New", "VLOOK Sans Mono", "Noto Sans Mono", Iosevka, "SF Mono", Menlo, "Cascadia Mono", Consolas, Courier, "Courier New", "VLOOK Sans", "Noto Sans CJK SC", "Source Han Sans SC", "思源黑体", "VLOOK Sans Mono", "Noto Sans Mono", Iosevka, "SF Mono", Menlo, "Cascadia Mono", Consolas, Courier, "Courier New", "Microsoft YaHei", "微软雅黑", SimHei, "黑体", "PingFang SC", "PingFang TC", "PingFang HK", monospace;
+  font-size: 1em;
+  border-radius: var(--vlook-base-radius);
+  padding: 4px 10px;
+  color: var(--fore-color);
+  background-color: var(--code-bg-color);
+}
 .mathjax-block > .code-tooltip {
   bottom: 0.375em;
 }
@@ -3642,6 +3650,7 @@ h6 code {
 /**************************************
 * 封面、封底
 **************************************/
+#write > pre.md-meta-block:first-child + h6,
 #write > h6:first-child,
 #write > h6:last-child {
   display: block;
@@ -3677,21 +3686,53 @@ h6 code {
   background-repeat: no-repeat, repeat-x, repeat-x;
   background-position: top center, top center, bottom center;
 }
+#write > pre.md-meta-block:first-child + h6::before,
 #write > h6:first-child::before,
 #write > h6:last-child::before {
   content: "";
 }
+#write > pre.md-meta-block:first-child + h6 sub,
 #write > h6:first-child sub {
   color: #cde5fc;
   font-family: "VLOOK Sans", "Noto Sans CJK SC", "Source Han Sans SC", "思源黑体", "Microsoft YaHei", "微软雅黑", SimHei, "黑体", "PingFang SC", "PingFang TC", "PingFang HK", sans-serif;
   font-weight: 900;
 }
+#write > pre.md-meta-block:first-child + h6 sup,
 #write > h6:first-child sup {
   color: #cde5fc;
   font-family: "VLOOK Sans", "Noto Sans CJK SC", "Source Han Sans SC", "思源黑体", "Microsoft YaHei", "微软雅黑", SimHei, "黑体", "PingFang SC", "PingFang TC", "PingFang HK", sans-serif;
   font-weight: 900;
 }
-#write > h6:first-child code,
+#write > pre.md-meta-block:first-child + h6 code,
+#write > pre.md-meta-block:first-child + h6 .mdx-tag-red,
+#write > pre.md-meta-block:first-child + h6 .mdx-tag-orange,
+#write > pre.md-meta-block:first-child + h6 .mdx-tag-yellow,
+#write > pre.md-meta-block:first-child + h6 .mdx-tag-green,
+#write > pre.md-meta-block:first-child + h6 .mdx-tag-cyan,
+#write > pre.md-meta-block:first-child + h6 .mdx-tag-blue,
+#write > pre.md-meta-block:first-child + h6 .mdx-tag-purple,
+#write > pre.md-meta-block:first-child + h6 .mdx-tag-pink #write > pre.md-meta-block:first-child + h6 .mdx-tag-brown,
+#write > pre.md-meta-block:first-child + h6 .mdx-tag-gray,
+#write > pre.md-meta-block:first-child + h6 .mdx-tag-name-red,
+#write > pre.md-meta-block:first-child + h6 .mdx-tag-name-orange,
+#write > pre.md-meta-block:first-child + h6 .mdx-tag-name-yellow,
+#write > pre.md-meta-block:first-child + h6 .mdx-tag-name-green,
+#write > pre.md-meta-block:first-child + h6 .mdx-tag-name-cyan,
+#write > pre.md-meta-block:first-child + h6 .mdx-tag-name-blue,
+#write > pre.md-meta-block:first-child + h6 .mdx-tag-name-purple,
+#write > pre.md-meta-block:first-child + h6 .mdx-tag-name-pink,
+#write > pre.md-meta-block:first-child + h6 .mdx-tag-name-brown,
+#write > pre.md-meta-block:first-child + h6 .mdx-tag-name-gray,
+#write > pre.md-meta-block:first-child + h6 .mdx-tag-value-red,
+#write > pre.md-meta-block:first-child + h6 .mdx-tag-value-orange,
+#write > pre.md-meta-block:first-child + h6 .mdx-tag-value-yellow,
+#write > pre.md-meta-block:first-child + h6 .mdx-tag-value-green,
+#write > pre.md-meta-block:first-child + h6 .mdx-tag-value-cyan,
+#write > pre.md-meta-block:first-child + h6 .mdx-tag-value-blue,
+#write > pre.md-meta-block:first-child + h6 .mdx-tag-value-purple,
+#write > pre.md-meta-block:first-child + h6 .mdx-tag-value-pink,
+#write > pre.md-meta-block:first-child + h6 .mdx-tag-value-brown,
+#write > pre.md-meta-block:first-child + h6 .mdx-tag-value-gray #write > h6:first-child code,
 #write > h6:first-child .mdx-tag-red,
 #write > h6:first-child .mdx-tag-orange,
 #write > h6:first-child .mdx-tag-yellow,
@@ -3723,6 +3764,8 @@ h6 code {
 #write > h6:first-child .mdx-tag-value-gray {
   font-size: 0.5em !important;
 }
+#write > pre.md-meta-block:first-child + h6 strong,
+#write > pre.md-meta-block:first-child + h6 strong::before,
 #write > h6:first-child strong,
 #write > h6:first-child strong::before {
   color: #cde5fc;
@@ -3730,9 +3773,11 @@ h6 code {
   font-family: "VLOOK Sans", "Noto Sans CJK SC", "Source Han Sans SC", "思源黑体", "Microsoft YaHei", "微软雅黑", SimHei, "黑体", "PingFang SC", "PingFang TC", "PingFang HK", sans-serif;
   font-weight: normal !important;
 }
+#write > pre.md-meta-block:first-child + h6 strong::before,
 #write > h6:first-child strong::before {
   content: "By ";
 }
+#write > pre.md-meta-block:first-child + h6 em,
 #write > h6:first-child em {
   color: #cde5fc;
   font-size: 0.4em;
@@ -3759,6 +3804,7 @@ h6 code {
   table {
     white-space: pre !important;
   }
+  #write > pre.md-meta-block:first-child + h6,
   #write > h6:first-child,
   #write > h6:last-child {
     font-size: 2em !important;
@@ -3868,8 +3914,11 @@ h6 code {
     visibility: hidden;
     filter: none;
   }
+  #write > pre.md-meta-block:first-child + h6,
   #write > h6:first-child,
   #write > h6:last-child,
+  #write > pre.md-meta-block:first-child + h6 strong,
+  #write > pre.md-meta-block:first-child + h6 em,
   #write > h6:first-child strong,
   #write > h6:first-child em {
     background: #FFFFFF none !important;
