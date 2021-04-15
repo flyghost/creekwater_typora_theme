@@ -51,12 +51,14 @@ body {
 }
 
 #write {
-    max-width: 860px;
+    /* 设置正文宽度 */
+    /* max-width: 860px; */
     margin: 0 auto;
     padding: 20px 30px 160px;
 }
 
 #write p {
+    /* 行间距 */
     line-height: 1.8rem;
     word-spacing: .05rem;
     /* color: #3f3f3f; */
