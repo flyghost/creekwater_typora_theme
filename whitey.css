@@ -31,12 +31,6 @@ body {
 	html {
 		font-size: 13px;
 	}
-	h1{
-		page-break-before: always;
-	}
-	h1:first-of-type{
-		page-break-before: avoid;
-	}
 }
 
 /* Typography
